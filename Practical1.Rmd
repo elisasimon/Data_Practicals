@@ -1,0 +1,45 @@
+---
+title: "Practical 1 - Data Science"
+author: "Elisa Simon"
+date: "`r format(Sys.time(), '%d %m %Y')`"
+output: github_document
+bibliography: Bib_1.bib
+---
+
+``` {r data, include = FALSE}
+library(readr)
+library(dplyr)
+library(janitor)
+library(ggplot2)
+```
+# Hair and eye color
+In their articles _The Genetic Overlap Between Hair and Eye Color_, @lin_genetic_2016 examined the correlation between eye and hair color of Netherlands people. They found multiple correlations but it is worth mentioning two:
+
+* The __strongest__ genetic correlation was between blue eyes and blond hair.
+
+* The __weakest__ genetic correlation was between green eyes and red hair.
+
+The ggplot2 package is very useful to visualize data. One can install it as following:
+```{R, eval = FALSE}
+install.packages("ggplot2")
+library(ggplot2)
+```
+
+Unfortunately, @lin_genetic_2016 are not open-scientists and I failed to find their original data. Consequently, I am not able to reproduce any graph. Consolation prize: a picture of a blond haired-blue eyed doll.
+
+![](https://i.etsystatic.com/9003800/d/il/d98430/2444030466/il_340x270.2444030466_pmac.jpg?version=0)
+
+## HairEyeColor R built-in data
+There is a pre-loaded dataset in R about hair and eye color that one can get like this:
+
+```{R, collapse = FALSE}
+# Table: hair and eye color for males and females
+data(HairEyeColor)
+HairEyeColor
+```
+
+In this sample, we can see that the blond hair blue eyes combination is only the most represented in female people. Additionally, there is no evidence in this sample that the rarest combination is red hair and green eyes, neither in males nor in females.
+
+# References
+
+<div iv="refs"></div>
